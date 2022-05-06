@@ -17,11 +17,11 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "./public/styles/generals";
-@import "./public/styles/vars";
+@import "../assets/styles/generals";
+@import "../assets/styles/vars";
 .card-container{
     width: 200px;
-    height: 350px;
+    min-height: 385px;
     margin-bottom: 40px;
     background-color: $header-bg;
         img{
@@ -30,7 +30,8 @@ export default {
         }
         #title{
             color: $title-color;
-            font-size: 20px;
+            font-size: 28px;
+            font-weight: 700;
             margin-bottom: 10px;
         }
         p{

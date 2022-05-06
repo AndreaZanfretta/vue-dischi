@@ -41,18 +41,13 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "./public/styles/generals";
-@import "./public/styles/vars";
+@import "../assets/styles/generals";
+@import "../assets/styles/vars";
 main{
     width: 100%;
-    height: calc(100vh - 80px);
     background-color: $main-bg;
 }
-.container{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin-top: 40px;
+.row{
+    padding-top: 50px;
 }
 </style>

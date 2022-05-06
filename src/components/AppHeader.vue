@@ -13,8 +13,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "./public/styles/generals";
-@import "./public/styles/vars";
+@import "../assets/styles/generals";
+@import "../assets/styles/vars";
 header{
     width: 100%;
     height: 80px;

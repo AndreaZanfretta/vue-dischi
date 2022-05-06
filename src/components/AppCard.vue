@@ -1,5 +1,5 @@
 <template>
-    <div class="card-container">
+    <div class="card-container text-center">
         <img :src="disco.poster" alt="disco.title">
         <p id="title">{{disco.title}}</p>
         <p>{{disco.author}}</p>
@@ -21,6 +21,8 @@ export default {
 @import "./public/styles/vars";
 .card-container{
     width: 200px;
+    height: 350px;
+    margin-bottom: 40px;
     background-color: $header-bg;
         img{
             width: 100%;
@@ -28,9 +30,12 @@ export default {
         }
         #title{
             color: $title-color;
+            font-size: 20px;
+            margin-bottom: 10px;
         }
         p{
             margin: 0;
+            color: $font-color;
         }
 }
 </style>

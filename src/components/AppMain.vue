@@ -2,7 +2,7 @@
     <main>
         <div class="container">
             <div class="row">
-                <div v-for="(disco, index) in dischi" :key="index" class="col-6 col-md-4 col-lg-2">
+                <div v-for="(disco, index) in dischi" :key="index" class="col-6 col-md-4 col-lg">
                     <app-card :disco="disco"/>
                 </div>
             </div>
@@ -53,5 +53,6 @@ main{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    margin-top: 40px;
 }
 </style>

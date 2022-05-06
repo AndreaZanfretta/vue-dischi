@@ -22,7 +22,6 @@ export default {
 .card-container{
     width: 200px;
     background-color: $header-bg;
-    margin: ;
         img{
             width: 100%;
             padding: 20px 20px;

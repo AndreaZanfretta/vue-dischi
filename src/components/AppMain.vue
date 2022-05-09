@@ -30,7 +30,7 @@ export default {
             dischi: [],
             genres: [],
             artists: [],
-            searchText: '',
+            searchGenre: '',
             searchArtist: '',
             endPoint: "https://flynn.boolean.careers/exercises/api/array/",
             loading: false,
@@ -39,27 +39,38 @@ export default {
     },
     methods: {
         setSearchText(text){
-            this.searchText = text;
-            console.log(this.searchText)
+            this.searchGenre = text;
+            console.log(this.searchGenre)
         },
         setSearchArtist(text){
             this.searchArtist = text;
             console.log(this.searchArtist)
         },
+        
 
     },
     computed: {
         dischiFiltered (){
-            if(this.searchText === '' && this.searchArtist === ''){return this.dischi;}
+            return this.dischi.filter((el) =>{
+                if(el.genre.toLowerCase().includes(this.searchGenre.toLowerCase())){
+                    if(el.author.toLowerCase().includes(this.searchArtist.toLowerCase())){
+                        console.log(el.author)
+                        return el;
+                    }
+                }
+            })
+        },
+        /* dischiFiltered (){
+            if(this.searchGenre === '' && this.searchArtist === ''){return this.dischi;}
             return this.dischi.filter((el => {
-                if(this.searchArtist === ''){
-                    return el.genre === this.searchText;
-                }else{
+                if((this.searchArtist === '' && this.searchGenre !== '') || this.searchGenre !== ''){
+                    return el.genre === this.searchGenre;
+                }else if((this.searchArtist !== '' && this.searchGenre === '') || this.searchArtist !== '' ){
                     return el.author === this.searchArtist;
                 }
                 
             }))
-        },
+        }, */
 
     },
     mounted(){

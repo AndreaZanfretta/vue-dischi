@@ -12,7 +12,7 @@
         </div>
         <!-- seleziona artista -->
         <div class="input-group">
-            <select placeholder="Seleziona un' artista.." v-model="artist" class="form-select" aria-label="Default select example">
+            <select placeholder="Seleziona un' artista.." v-model="artist" class="form-select" aria-label="Default select example" >
                 <option  v-for="(artista, index) in artisti" :key="index" :value="artista">{{artista}}</option>
             </select>
             <div class="input-group-append">

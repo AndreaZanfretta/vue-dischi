@@ -17,7 +17,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "../assets/styles/generals";
 @import "../assets/styles/vars";
 .card-container{
     width: 200px;
